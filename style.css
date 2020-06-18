@@ -37,7 +37,7 @@ a:hover{
 }
 
 .nav-icon__font{
-   color: #00000099;   
+    color: #00000099;   
 }
 
 
@@ -54,8 +54,25 @@ a:hover{
     border-bottom: 2px solid #f35c58;
 }
 
+
+.card{
+    width: 120px;
+    height: 200px;
+}
+
+.img-caroussel{
+    width: 125%;
+    height: 400px;
+}
+
+.div-categoria{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .contacts-container{
     background-color: #f8f9fa;
+    color: #00000099
 }
 
 .contacts{
@@ -81,7 +98,44 @@ a:hover{
     height: 28px;
 }
 
-.card{
-    width: 120px;
-    height: 200px;
+ a{
+    color: #00000099;
+}
+
+.info-container__apps, .info-container__about, .info-container__other{
+    width: 30%;
+    margin: 20px;
+}
+
+.link-sky{
+    background-color: #f35c58;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.link-sky > span{
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 0;
+}
+
+.link-store{
+    width: 250px;
+    height: 70px;
+    margin-top: 10px;
+}
+
+.rodape{
+    background-color: #f8f9fa;
+    color: #00000099;
+}
+
+
+
+@media(max-width: 560px){
+    .info-container__apps, .info-container__about, .info-container__other{
+        width: 70%;
+    }
 }

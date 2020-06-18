@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://www.sky.com.br/o/sky-pre-theme/images/sky_icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="style.css">
     <title>Sky</title>
 </head>
@@ -70,25 +73,12 @@
     </section>
 
     <section class="menu-container" id="menu">
-        <div class="menu-container__suspense" id="Suspense">
-            <h6 class="m-5">Suspense e terror</h6>
-         
-        </div>
-        <div class="menu-container__nacional" id="infantil">
-            <h6 class="m-5">Infantil</h6>
+       
 
-        </div>
-        <div class="menu-container__comedia" id="comedia">
-            <h6 class="m-5">Comédia</h6>
 
-        </div>
-        <div class="menu-container__aventura" id="aventura">
-            <h6 class="m-5">Ação e aventura</h6>
-
-        </div>
     </section>
 
-    <section class="contacts-container ">
+    <section class="contacts-container">
         <div
             class="contacts d-flex flex-column justify-content-center align-items-center flex-md-row justify-content-md-around">
             <span class="contacts-container__logo">Sky</span>
@@ -106,34 +96,38 @@
         </div>
 
 
-        <div class="info-container">
+        <div
+            class="info-container m-4 d-flex flex-column justify-content-start align-items-start flex-md-row justify-content-md-around">
             <div class="info-container__apps">
-                <a
-                    href="https://play.google.com/store/apps/details?id=br.com.sky.selfcare&referrer=utm_source%3Dsite-opcionais%26utm_medium%3Dbutton%26utm_campaign%3Despn-extra">
-                    Minha
-                    <span>SKY</span>
-                </a>
+                <div class="d-flex text-center">
+                    <a class="link-sky"
+                        href="https://play.google.com/store/apps/details?id=br.com.sky.selfcare&referrer=utm_source%3Dsite-opcionais%26utm_medium%3Dbutton%26utm_campaign%3Despn-extra"
+                        target="blank">
+                        Minha
+                        <span>SKY</span>
+                    </a>
 
-                <div>
-                    <div>
-                        <p>Disponível na</p>
-                        <span>Apple Store</span>
-                    </div>
-                    <img src="" alt="ïcone Aple Store">
+                    <a href="#" target="blank" class="font-weight-bold">Baixe no seu celular o app Minha SKY e
+                        divirta-se.</a>
+
                 </div>
 
-                <div>
-                    <div>
-                        <p>Disponível na</p>
-                        <span>Google Play</span>
-                    </div>
-                    <img src="" alt="ïcone Google Play">
+                <div class="mt-4 d-flex">
+                    <a href="https://apps.apple.com/br/app/minha-sky/id1154049541" target="blank"><img
+                            class="link-store" src="./assets/disponivel-na-app-store-botao.png"
+                            alt="Baixar Apple Store"></a>
+                </div>
+
+                <div class="d-flex">
+                    <a href="https://play.google.com/store/apps/details?id=br.com.sky.selfcare&referrer=utm_source%3Dsite-opcionais%26utm_medium%3Dbutton%26utm_campaign%3Despn-extra"
+                        target="blank"><img class="link-store" src="./assets/icon-google-play.781d6f7b.png"
+                            alt="Baixar no Google Play"></a>
                 </div>
             </div>
 
             <div class="info-container__about">
-                <h6>Sobre</h6>
-                <div>
+                <h6 class="font-weight-bold">Sobre</h6>
+                <div class="d-flex flex-column">
                     <a href="#">Nossa história</a>
                     <a href="#">Imprensa</a>
                     <a href="#">Prêmios conquistados</a>
@@ -142,32 +136,33 @@
                     <a href="#">Promoção</a>
                 </div>
 
-                <h6>Ajuda</h6>
-                <div>
-                    <a href="#" >Central de ajuda</a>
+                <h6 class="font-weight-bold">Ajuda</h6>
+                <div class="d-flex flex-column">
+                    <a href="#">Central de ajuda</a>
                     <a href="#">Manuais</a>
                 </div>
 
             </div>
 
             <div class="info-container__other">
-                <h6>Nossas responsabilidades</h6>
-                <div>
+                <h6 class="font-weight-bold">Nossas responsabilidades</h6>
+                <div class="d-flex flex-column">
                     <a href="#">Conselho aos usuários</a>
                     <a href="#"> Pesquisa Anatel</a>
                     <a href="#"> Relatórios de transparência</a>
                     <a href="#">Responsabilidade Social</a>
-                    <a href="#">Acessibilidade</a>                    
+                    <a href="#">Acessibilidade</a>
                 </div>
 
-                <a href="#">SKY Empresas</a>
+                <a class="font-weight-bold" href="#">SKY Empresas</a>
 
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="d-flex flex-column justify-content-center align-items-center flex-md-row justify-content-md-around">
+        <div
+            class="d-flex pb-3 flex-column justify-content-center align-items-center flex-md-row justify-content-md-around">
             <a href="#">Início |</a>
             <a href="#">Política de Privacidade |</a>
             <a href="#">Contratos gerais |</a>
@@ -175,6 +170,13 @@
             <a href="#">Cancelamento |</a>
             <a href="#">Ouvidoria |</a>
             <a href="#">Comsumidor.gov</a>
+        </div>
+
+        <div class="rodape text-center p-3">
+            <span>® Todos os direitos reservados 2018. Todas as marcas SKY e qualquer propriedade intelectual inserida
+                nelas são de propriedade da SKY Internacional AG e usadas pela SKY Serviços de Banda Larga LTDA.
+                mediante licença.</span>
+
         </div>
     </footer>
 
@@ -189,6 +191,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
 </body>
 
 </html>
