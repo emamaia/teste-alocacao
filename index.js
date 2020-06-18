@@ -1,9 +1,9 @@
 const carousel = document.getElementById('carousel')
 const menu = document.getElementById('menu');
-const menuTemidos = document.getElementById('temidos');
-const menuNacional = document.getElementById('nacional');
-const menuDc = document.getElementById('dc');
-const menuMarvel = document.getElementById('marvel');
+const menuSuspense = document.getElementById('suspense');
+const menuInfantil = document.getElementById('infantil');
+const menuComedia = document.getElementById('comedia');
+const menuAventura = document.getElementById('aventura');
 
 const url = "https://sky-frontend.herokuapp.com/movies";
 
@@ -14,6 +14,7 @@ async function getApi(url) {
             const json = await response.json();
             console.log(json);
             getCarousel(json[0].items);
+            getCards(json[2].movies)
 
         } else {
             const err = `${response.status}: ${response.statusText}`;
@@ -44,37 +45,31 @@ function getCarousel(items) {
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="${items[0].images[0].url}" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>${items[0].title}</h5>
-        <p>${items[0].description}</p>
-      </div>
+      <div class="carousel-caption d-none d-md-block">        
+    </div>
     </div>
     <div class="carousel-item">
       <img src="${items[1].images[0].url}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>${items[1].title}</h5>
-        <p>${items[1].description}</p>
+        
       </div>
     </div>
     <div class="carousel-item">
       <img src="${items[2].images[0].url}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-      <h5>${items[2].title}</h5>
-      <p>${items[2].description}</p>
+     
       </div>
     </div>
     <div class="carousel-item">
       <img src="${items[3].images[0].url}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-      <h5>${items[3].title}</h5>
-      <p>${items[3].description}</p>
+     
       </div>
     </div>
     <div class="carousel-item">
     <img src="${items[4].images[0].url}" class="d-block w-100" alt="...">
     <div class="carousel-caption d-none d-md-block">
-    <h5>${items[4].title}</h5>
-    <p>${items[4].description}</p>
+    
     </div>
   </div>
   </div>
@@ -89,5 +84,19 @@ function getCarousel(items) {
 </div>
     `
 }
+
+
+function getCards(card){
+    console.log(card); 
+    for(let i=0; i< card.length; i++){
+        
+        let menuCard = document.createElement('div');
+        menu.appendChild(menuCard);    
+        menu.innerHTML += `<img class="card" src="${card[i].images[0].url}" alt="Card do filme ">`
+    }
+}
+
+
+
 
 getApi(url)

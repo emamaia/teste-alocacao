@@ -80,3 +80,8 @@ a:hover{
     width: 28px;
     height: 28px;
 }
+
+.card{
+    width: 120px;
+    height: 200px;
+}
