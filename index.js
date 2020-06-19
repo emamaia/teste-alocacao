@@ -91,7 +91,7 @@ function getCards(card) {
   categories.forEach(function (cards, categoria) {
     let divCarousel = document.createElement('div')
     menu.appendChild(divCarousel);   
-    divCarousel.classList.add('swiper-container', 'div-categoria')
+    divCarousel.classList.add('swiper-container', 'div-carousel')
 
     let titleCategoria = document.createElement('h5')
     titleCategoria.innerHTML += categoria
