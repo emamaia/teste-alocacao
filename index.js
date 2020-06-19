@@ -104,12 +104,19 @@ function getCards(card) {
 
     for (let i = 0; i < cards.length; i++) {
 
-      
+    if(cards[i].isBlocked){
+      divCards.innerHTML = `
+      ${divCards.innerHTML} 
+      <div class="swiper-slide">
+        <img class="card" src="${cards[i].images[0].url}" alt="Card do filme"><img class="icon-shopping" src='./assets/block.png'></img>
+      </div>`
+    } else {
       divCards.innerHTML = `
           ${divCards.innerHTML} 
           <div class="swiper-slide">
             <img class="card" src="${cards[i].images[0].url}" alt="Card do filme"><img class="icon-shopping" src='./assets/shopping-white.png'></img>
-          </div>`;
+          </div>`
+    }
     }
 
     divCarousel.innerHTML += `
