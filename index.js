@@ -111,7 +111,7 @@ function getCards(card) {
     }
 
     divCarousel.innerHTML += `
-    <div class="btn swiper-button-prev"></div>
+    <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
     `
   }, categories)  
@@ -125,6 +125,24 @@ function getCards(card) {
   slidesPerGroup: 6,
   height: 200,
   slidesOffsetBefore: 0,
+
+  breakpoints: {
+    1024: {
+      slidesPerView: 5,
+    },
+
+    820:{
+      slidesPerView: 4,
+    },
+
+    640:{
+      slidesPerView: 3,
+    },
+
+    340:{
+      slidesPerView: 1,
+    }
+  },
 
   // If we need pagination
   pagination: {
