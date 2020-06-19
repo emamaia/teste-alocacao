@@ -29,44 +29,59 @@ criaErro = (erro) => {
 
 function getCarousel(items) {
   console.log(items);
-  let itemCarousel = document.createElement('div')
-  carousel.appendChild(itemCarousel)
-  itemCarousel.innerHTML = `
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="${items[0].images[0].url}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="${items[1].images[0].url}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="${items[2].images[0].url}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item ">
-    <img src="${items[3].images[0].url}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item ">
-      <img src="${items[4].images[0].url}" class="d-block w-100" alt="...">
-    </div>
-
-
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+  let divCarousel = document.createElement('div');
+  carousel.appendChild(divCarousel);
+  divCarousel.classList.add('swiper-container');
+  let itemCarousel = document.createElement('div');
+  itemCarousel.classList.add('swiper-wrapper')
+  divCarousel.appendChild(itemCarousel);
+  
+  items.forEach(item =>{
+    let divSlide = document.createElement('div');
+    itemCarousel.appendChild(divSlide);
+    divSlide.classList.add('swiper-slide', 'div-slide')
+    divSlide.innerHTML = `
+    <img  src="${item.images[0].url}" class="img-carousel" alt="Banner filme">
     `
+  })
+
+  divCarousel.innerHTML += `
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    ` 
+
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+  
+      820:{
+        slidesPerView: 2,
+      },
+  
+      640:{
+        slidesPerView: 2,
+      },
+  
+      340:{
+        slidesPerView: 1,
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 }
 
 
@@ -103,7 +118,6 @@ function getCards(card) {
     divCards.classList.add('swiper-wrapper')
 
     for (let i = 0; i < cards.length; i++) {
-
     if(cards[i].isBlocked){
       divCards.innerHTML = `
       ${divCards.innerHTML} 
@@ -114,7 +128,7 @@ function getCards(card) {
       divCards.innerHTML = `
           ${divCards.innerHTML} 
           <div class="swiper-slide">
-            <img class="card" src="${cards[i].images[0].url}" alt="Card do filme"><img class="icon-shopping" src='./assets/shopping-white.png'></img>
+            <img class="card" src="${cards[i].images[0].url}" alt="Card do filme ${cards[i].title}"><img class="icon-shopping" src='./assets/shopping-white.png'></img>
           </div>`
     }
     }
@@ -125,7 +139,7 @@ function getCards(card) {
     `
   }, categories)  
 
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('.div-carousel', {
     // Optional parameters
     direction: "horizontal",
   loop: true,

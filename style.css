@@ -49,6 +49,35 @@ a:hover{
     color: #00000099;
 }
 
+.img-carousel{    
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+       
+}
+.img-carousel:hover{
+    width: 120%;
+    
+}
+
+.div-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
 .header-container__title{
     width: 30vw;
     font-weight: bold;
@@ -128,6 +157,10 @@ a:hover{
     width: 250px;
     height: 70px;
     margin-top: 10px;
+}
+
+.link-store:hover{
+    color: #f35c58;
 }
 
 .rodape{
