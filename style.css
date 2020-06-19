@@ -79,16 +79,18 @@ a:hover{
   }
 
 .header-container__title{
-    width: 30vw;
+    width: 100vw;
     font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-.header-container__title:hover{
+.header-container__title> h5{
+    width: 30vw;
+}
+
+.header-container__title> h5:hover{
     border-bottom: 2px solid #f35c58;
-}
-
-.title.categoria{
-    margin-top: 30px;
 }
 
 .card{
@@ -101,7 +103,10 @@ a:hover{
 }
 
 .menu-container{
-    margin: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .icon-shopping{
