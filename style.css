@@ -75,6 +75,17 @@ a:hover{
     margin: 100px;
 }
 
+.icon-shopping{
+    width: 33px;
+    height: 33px;
+    border: 2px solid #ffffff;
+    padding: 3px;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: 100px;
+}
+
 .contacts-container{
     background-color: #f8f9fa;
     color: #00000099

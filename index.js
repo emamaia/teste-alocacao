@@ -103,10 +103,12 @@ function getCards(card) {
     divCards.classList.add('swiper-wrapper')
 
     for (let i = 0; i < cards.length; i++) {
+
+      
       divCards.innerHTML = `
           ${divCards.innerHTML} 
           <div class="swiper-slide">
-            <img class="card" src="${cards[i].images[0].url}" alt="Card do filme">
+            <img class="card" src="${cards[i].images[0].url}" alt="Card do filme"><img class="icon-shopping" src='./assets/shopping-white.png'></img>
           </div>`;
     }
 
